@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/Advice-Generator-React/static/css/main.db54faa3.css",
-    "main.js": "/Advice-Generator-React/static/js/main.8b5323d1.js",
+    "main.js": "/Advice-Generator-React/static/js/main.d8d0385c.js",
     "static/js/787.fe2905bd.chunk.js": "/Advice-Generator-React/static/js/787.fe2905bd.chunk.js",
     "index.html": "/Advice-Generator-React/index.html",
     "static/media/icon-dice.svg": "/Advice-Generator-React/static/media/icon-dice.08691e4c24c11b5ba564e06b1f6bcbf3.svg",
     "static/media/pattern-divider-desktop.svg": "/Advice-Generator-React/static/media/pattern-divider-desktop.ed9685263f6b47d21c8848f7d8bdd10e.svg",
     "static/media/pattern-divider-mobile.svg": "/Advice-Generator-React/static/media/pattern-divider-mobile.aca38726412164df099c43d4f2fed72e.svg",
     "main.db54faa3.css.map": "/Advice-Generator-React/static/css/main.db54faa3.css.map",
-    "main.8b5323d1.js.map": "/Advice-Generator-React/static/js/main.8b5323d1.js.map",
+    "main.d8d0385c.js.map": "/Advice-Generator-React/static/js/main.d8d0385c.js.map",
     "787.fe2905bd.chunk.js.map": "/Advice-Generator-React/static/js/787.fe2905bd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.db54faa3.css",
-    "static/js/main.8b5323d1.js"
+    "static/js/main.d8d0385c.js"
   ]
 }
