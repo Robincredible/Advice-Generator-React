@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import dice from '../images/icon-dice.svg';
 import divider from '../images/pattern-divider-desktop.svg';
+import mobileDivider from '../images/pattern-divider-mobile.svg';
 
 const FetchAdvice = (props) => {
 
@@ -33,7 +34,7 @@ const FetchAdvice = (props) => {
         return ( 
 	        <div>
 	        	<h1>Loading</h1>
-	        	<p><Loader /></p>
+	        	<Loader />
 	        </div>
 	        );
     } else {
@@ -80,10 +81,13 @@ const Advice = () => {
 
 	return(
 		<div className={'wrapper' + newQuote}>
+				<div className="loader-wrapper">
+					<div className="loader noselect"></div>
+				</div>
 			<div className={'advice-wrapper' + newQuote}>
 				<FetchAdvice id={id} />
 				<div className="divider noselect">
-					<img src={divider} alt=""/>
+					<img src={mobileDivider} srcSet={`${mobileDivider} 600w, ${divider} 3200w, `} alt=""/>
 				</div>
 			</div>
 			<div onClick={handleClick} className={'random-quote-button noselect' + clicked}>
