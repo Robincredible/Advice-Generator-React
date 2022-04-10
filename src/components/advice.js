@@ -4,7 +4,6 @@ import divider from '../images/pattern-divider-desktop.svg';
 import mobileDivider from '../images/pattern-divider-mobile.svg';
 
 const FetchAdvice = (props) => {
-
 	const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [slip, setSlip] = useState([]);
@@ -26,7 +25,7 @@ const FetchAdvice = (props) => {
 	if (error) {
         return( 
 	        <div>
-	        	<h1>Error</h1>
+	        	<h1>Error {error.message.type}</h1>
 	        	<p>Error: {error.message}</p>
 	        </div>
 	        )
@@ -67,11 +66,24 @@ const Advice = () => {
 	const [id, setID] = useState(0);
 	const [clicked, setClicked] = useState('');
 	const [newQuote, setNewQuote] = useState('');
+	const [preventClick, setPreventClick] = useState(false);
+	const [preventClass, setPreventClass] = useState('');
 
 	function handleClick(){
 		setID(Math.floor(Math.random() * 20));
 		setClicked(' clicked');
 		setNewQuote(' new-quote');
+		setPreventClick(true);
+
+		if (preventClick === true){
+			setPreventClass(' no-click');
+		}
+
+		//prevent clicking again for 2 seconds since the api is cached within that period, returning the same advice - https://api.adviceslip.com/
+		setTimeout(function(){
+			setPreventClick(false);
+			setPreventClass('');
+		}, 2000);
 
 		setTimeout(function(){
 			setClicked('');
@@ -90,7 +102,7 @@ const Advice = () => {
 					<img src={mobileDivider} srcSet={`${mobileDivider} 600w, ${divider} 3200w, `} alt=""/>
 				</div>
 			</div>
-			<div onClick={handleClick} className={'random-quote-button noselect' + clicked}>
+			<div onClick={handleClick} className={'random-quote-button noselect' + clicked + preventClass}>
 				<img src={dice} alt="Random Quote" />
 			</div>
 		</div>

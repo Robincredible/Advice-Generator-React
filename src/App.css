@@ -114,6 +114,10 @@ for users without a mouse(i.e. using only the keyboard, among others). Used it o
   -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
 }
 
+.no-click{
+  pointer-events: none;
+}
+
 h1, h2, h3, h4, h5, h6{
  color: hsl(150, 100%, 66%);
  margin: 0;
