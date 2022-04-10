@@ -4,9 +4,11 @@ import divider from '../images/pattern-divider-desktop.svg';
 import mobileDivider from '../images/pattern-divider-mobile.svg';
 
 const FetchAdvice = (props) => {
+	
 	const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [slip, setSlip] = useState([]);
+
     useEffect(() => {
         fetch("https://api.adviceslip.com/advice")
             .then(res => res.json())
@@ -66,23 +68,17 @@ const Advice = () => {
 	const [id, setID] = useState(0);
 	const [clicked, setClicked] = useState('');
 	const [newQuote, setNewQuote] = useState('');
-	const [preventClick, setPreventClick] = useState(false);
 	const [preventClass, setPreventClass] = useState('');
 
 	function handleClick(){
 		setID(Math.floor(Math.random() * 20));
 		setClicked(' clicked');
 		setNewQuote(' new-quote');
-		setPreventClick(true);
+		setPreventClass(' no-click');
 
-		if (preventClick === true){
-			setPreventClass(' no-click');
-		}
-
-		//prevent clicking again for 2 seconds since the api is cached within that period, returning the same advice - https://api.adviceslip.com/
 		setTimeout(function(){
-			setPreventClick(false);
-			setPreventClass('');
+				//setPreventClick(false);
+				setPreventClass('');
 		}, 2000);
 
 		setTimeout(function(){
