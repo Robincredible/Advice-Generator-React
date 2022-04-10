@@ -42,7 +42,7 @@ const FetchAdvice = (props) => {
         return (
         	<div className="quote">
 	        	<h1>Advice {'#' + slip.id}</h1>
-	            <p key={slip.id}>"{slip.advice}"</p>
+	            <p key={slip.id}>“{slip.advice}”</p>
             </div>
         );
     }
