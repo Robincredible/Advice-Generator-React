@@ -95,7 +95,8 @@ const Advice = () => {
 			<div className={'advice-wrapper' + newQuote}>
 				<FetchAdvice id={id} />
 				<div className="divider noselect">
-					<img src={mobileDivider} srcSet={`${mobileDivider} 600w, ${divider} 3200w `} alt=""/>
+					<img src={mobileDivider} srcSet={`${mobileDivider} 550w, ${divider} 1920w`}  sizes="(max-width: 600px) 550px,
+            1920px" alt=""/>
 				</div>
 			</div>
 			<div onClick={handleClick} className={'random-quote-button noselect' + clicked + preventClass}>
