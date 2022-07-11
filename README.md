@@ -1,6 +1,6 @@
 # Advice Generator App using React
 
-Hello! This is my second attempt in doing stuff with React! This is another pretty simple project with an API call returning a JSON.
+This is another simple project with an API call returning a JSON.
 
 ## Consuming a JSON API with Fetch
 
